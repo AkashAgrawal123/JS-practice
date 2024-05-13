@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div">
+      DIV
+      <p id="p">
+        P
+        <span id="span">SPAN</span>
+      </p>
+    </div>
+    <script src="../app.js"></script>
+    <script>
+      const handleClick = (tag) => alert(`clicked in ${tag}`);
+
+      document
+        .getElementById("div")
+        .addEventListener("click", () => handleClick("div"), true);
+      document
+        .getElementById("p")
+        .addEventListener("click", () => handleClick("p"), true);
+      document
+        .getElementById("span")
+        .addEventListener("click", () => handleClick("span", true));
+    </script>
+  </body>
+</html>
